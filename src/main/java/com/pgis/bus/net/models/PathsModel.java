@@ -6,7 +6,12 @@ import com.pgis.bus.net.models.path.PathModel;
 
 public class PathsModel {
 
-	Collection<PathModel> paths;
+	private Collection<PathModel> paths;
+	
+	/**
+	 * Время поиска маршрутов, мсек.
+	 */
+	private long findTime;
 
 	public PathsModel() {
 
@@ -23,6 +28,19 @@ public class PathsModel {
 
 	public void setPaths(Collection<PathModel> paths) {
 		this.paths = paths;
+	}
+
+	public void setFindTime(long findTime) {
+		this.findTime = findTime;
+
+	}
+
+	public long getFindTime() {
+		return findTime;
+	}
+
+	public double getFindTimeSecs() {
+		return findTime/1000.0;
 	}
 
 }

@@ -1,6 +1,8 @@
 package com.pgis.bus.net.models.path;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
 
 public class PathModel {
 	int pathID;
@@ -80,6 +82,8 @@ public class PathModel {
 	public void setRoutes(Collection<RouteWayModel> routes) {
 		this.routes = routes;
 	}
+	
+
 	
 	
 }
