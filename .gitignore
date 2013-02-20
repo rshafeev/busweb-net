@@ -1,0 +1,13 @@
+*.project~
+*.classpath~
+*.project
+*.classpath
+*.settings
+*.private
+*.jar
+*.class
+bin*/
+target*/
+build/
+bin/
+target/
