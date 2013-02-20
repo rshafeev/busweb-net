@@ -4,14 +4,15 @@ public class RouteWayModel extends WayModel {
 	private int ID;
 	private String type;
 	private String name;
-	private int startRelationIndex;
-	private int finishRelationIndex;
+	private int start_rindex;
+	private int finish_rindex;
 
-	private String startStation;
-	private String finishStation;
+	private String start;
+	private String finish;
 
-	private int waitBeforeTimeSecs;
-
+	private int wait;
+	private int freq;
+	
 	private double cost;
 
 	public int getID() {
@@ -39,43 +40,43 @@ public class RouteWayModel extends WayModel {
 	}
 
 	public int getStartRelationIndex() {
-		return startRelationIndex;
+		return start_rindex;
 	}
 
 	public void setStartRelationIndex(int startRelationIndex) {
-		this.startRelationIndex = startRelationIndex;
+		this.start_rindex = startRelationIndex;
 	}
 
 	public int getFinishRelationIndex() {
-		return finishRelationIndex;
+		return finish_rindex;
 	}
 
 	public void setFinishRelationIndex(int finishRelationIndex) {
-		this.finishRelationIndex = finishRelationIndex;
+		this.finish_rindex = finishRelationIndex;
 	}
 
 	public String getStartStation() {
-		return startStation;
+		return start;
 	}
 
 	public void setStartStation(String startStation) {
-		this.startStation = startStation;
+		this.start = startStation;
 	}
 
 	public String getFinishStation() {
-		return finishStation;
+		return finish;
 	}
 
 	public void setFinishStation(String finishStation) {
-		this.finishStation = finishStation;
+		this.finish = finishStation;
 	}
 
 	public int getWaitBeforeTimeSecs() {
-		return waitBeforeTimeSecs;
+		return wait;
 	}
 
 	public void setWaitBeforeTimeSecs(int waitBeforeTimeSecs) {
-		this.waitBeforeTimeSecs = waitBeforeTimeSecs;
+		this.wait = waitBeforeTimeSecs;
 	}
 
 	public double getCost() {
@@ -87,7 +88,17 @@ public class RouteWayModel extends WayModel {
 	}
 
 	public int getWholeTimeSecs() {
-		return this.waitBeforeTimeSecs + this.moveTimeSecs;
+		return this.wait + this.moveTimeSecs;
 	}
+	
+
+	public int getFrequency() {
+		return freq;
+	}
+
+	public void setFrequency(int freq) {
+		this.freq = freq;
+	}
+
 
 }

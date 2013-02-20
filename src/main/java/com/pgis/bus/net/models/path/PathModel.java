@@ -7,7 +7,7 @@ import java.util.Iterator;
 public class PathModel {
 	int pathID;
 	InputWayModel input;
-	OutWayModel out;
+	OutputWayModel output;
 	Collection<TransitionWayModel> transitions;
 	Collection<RouteWayModel> routes;
 
@@ -23,7 +23,7 @@ public class PathModel {
 	public double getDistance() {
 		double distance = 0;
 		distance += input.getDistance();
-		distance += out.getDistance();
+		distance += output.getDistance();
 		for (RouteWayModel r : routes) {
 			distance += r.getDistance();
 		}
@@ -36,7 +36,7 @@ public class PathModel {
 	public double getWholeTimeSecs() {
 		int time = 0;
 		time += input.getMoveTimeSecs();
-		time += out.getMoveTimeSecs();
+		time += output.getMoveTimeSecs();
 		for (RouteWayModel r : routes) {
 			time += r.getDistance();
 		}
@@ -59,12 +59,12 @@ public class PathModel {
 		this.input = input;
 	}
 
-	public OutWayModel getOut() {
-		return out;
+	public OutputWayModel getOutput() {
+		return output;
 	}
 
-	public void setOut(OutWayModel out) {
-		this.out = out;
+	public void setOutput(OutputWayModel out) {
+		this.output = out;
 	}
 
 	public Collection<TransitionWayModel> getTransitions() {

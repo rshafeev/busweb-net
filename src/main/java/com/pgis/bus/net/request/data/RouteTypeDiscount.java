@@ -1,7 +1,7 @@
 package com.pgis.bus.net.request.data;
 
 public class RouteTypeDiscount {
-	private String route_type_id;
+	private String id;
 	private double discount;
 
 	public RouteTypeDiscount() {
@@ -11,16 +11,16 @@ public class RouteTypeDiscount {
 
 	public RouteTypeDiscount(String route_type_id, double discount) {
 		super();
-		this.route_type_id = route_type_id;
+		this.id = route_type_id;
 		this.discount = discount;
 	}
 
-	public String getRoute_type_id() {
-		return route_type_id;
+	public String getRouteType() {
+		return id;
 	}
 
-	public void setRoute_type_id(String route_type_id) {
-		this.route_type_id = route_type_id;
+	public void setRouteType(String route_type_id) {
+		this.id = route_type_id;
 	}
 
 	public double getDiscount() {
@@ -33,7 +33,7 @@ public class RouteTypeDiscount {
 
 	@Override
 	public String toString() {
-		return "RouteTypeDiscount [route_type_id=" + route_type_id
+		return "RouteTypeDiscount [route_type_id=" + id
 				+ ", discount=" + discount + "]";
 	}
 

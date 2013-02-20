@@ -1,6 +1,6 @@
 package com.pgis.bus.net.models.path;
 
-public class OutWayModel extends WayModel{
+public class OutputWayModel extends WayModel{
 
 	private int fromRouteID;
 
