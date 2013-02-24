@@ -4,9 +4,9 @@ public class RouteWayModel extends WayModel {
 	private int ID;
 	private String type;
 	private String name;
-	private int start_rindex;
-	private int finish_rindex;
-
+	private int startInd;
+	private int finishInd;
+	
 	private String start;
 	private String finish;
 
@@ -40,19 +40,19 @@ public class RouteWayModel extends WayModel {
 	}
 
 	public int getStartRelationIndex() {
-		return start_rindex;
+		return startInd;
 	}
 
 	public void setStartRelationIndex(int startRelationIndex) {
-		this.start_rindex = startRelationIndex;
+		this.startInd = startRelationIndex;
 	}
 
 	public int getFinishRelationIndex() {
-		return finish_rindex;
+		return finishInd;
 	}
 
 	public void setFinishRelationIndex(int finishRelationIndex) {
-		this.finish_rindex = finishRelationIndex;
+		this.finishInd = finishRelationIndex;
 	}
 
 	public String getStartStation() {
