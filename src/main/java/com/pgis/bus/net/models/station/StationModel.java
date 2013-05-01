@@ -1,15 +1,17 @@
-package com.pgis.bus.net.models;
+package com.pgis.bus.net.models.station;
+
+import com.pgis.bus.net.models.geom.PointModel;
 
 public class StationModel {
 	private Integer id;
 	private String name;
-	private Location location;
+	private PointModel location;
 
 	public StationModel() {
 
 	}
 
-	public StationModel(Integer id, String name, Location location) {
+	public StationModel(Integer id, String name, PointModel location) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -32,11 +34,11 @@ public class StationModel {
 		this.name = name;
 	}
 
-	public Location getLocation() {
+	public PointModel getLocation() {
 		return location;
 	}
 
-	public void setLocation(Location location) {
+	public void setLocation(PointModel location) {
 		this.location = location;
 	}
 

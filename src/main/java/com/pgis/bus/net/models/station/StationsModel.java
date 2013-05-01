@@ -1,6 +1,7 @@
-package com.pgis.bus.net.models;
+package com.pgis.bus.net.models.station;
 
 import java.util.Collection;
+
 
 public class StationsModel {
 

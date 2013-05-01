@@ -1,33 +1,33 @@
 package com.pgis.bus.net.request.data;
 
-import com.pgis.bus.net.orm.DayEnum;
+import com.pgis.bus.net.models.DayEnumModel;
 
-public class OutTime {
+public class OutTimeModel {
 
 	/**
 	 * День выезда
 	 */
-	private DayEnum dayID;
-	
+	private DayEnumModel dayID;
+
 	/**
 	 * Время выезда, мсек
 	 */
 	private long timeStartSecs;
 
-	public OutTime() {
+	public OutTimeModel() {
 
 	}
 
-	public OutTime(DayEnum dayID, int hour, int mins) {
+	public OutTimeModel(DayEnumModel dayID, int hour, int mins) {
 		timeStartSecs = (hour * 60 * 60 + mins * 60);
 		this.dayID = dayID;
 	}
 
-	public DayEnum getDayID() {
+	public DayEnumModel getDayID() {
 		return dayID;
 	}
 
-	public void setDayID(DayEnum dayID) {
+	public void setDayID(DayEnumModel dayID) {
 		this.dayID = dayID;
 	}
 

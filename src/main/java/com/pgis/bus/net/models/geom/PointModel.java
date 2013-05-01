@@ -1,16 +1,21 @@
-package com.pgis.bus.net.models;
+package com.pgis.bus.net.models.geom;
 
-public class Location {
+public class PointModel {
 	private double lat;
 	private double lon;
 
-	public Location() {
+	public PointModel() {
 
 	}
 
-	public Location(double lat, double lon) {
+	public PointModel(double lat, double lon) {
 		this.lat = lat;
 		this.lon = lon;
+	}
+
+	public PointModel(PointModel location) {
+		this.lat = location.lat;
+		this.lon = location.lon;		
 	}
 
 	public double getLat() {
@@ -28,5 +33,5 @@ public class Location {
 	public void setLon(double lon) {
 		this.lon = lon;
 	}
-
+	
 }

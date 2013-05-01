@@ -4,4 +4,14 @@
   <artifactId>busWeb.net</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>busWeb.net</name>
+
+<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.7</version>
+			<scope>test</scope>
+		</dependency>
+</dependencies>	
+
 </project>

@@ -1,8 +1,7 @@
-package com.pgis.bus.net.models;
+package com.pgis.bus.net.models.path;
 
 import java.util.Collection;
 
-import com.pgis.bus.net.models.path.PathModel;
 
 public class PathsModel {
 
