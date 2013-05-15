@@ -1,7 +1,10 @@
 package com.pgis.bus.net.models.station;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 import com.pgis.bus.net.models.geom.PointModel;
 
+@XmlRootElement
 public class StationModel {
 	private Integer id;
 	private String name;

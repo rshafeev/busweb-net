@@ -1,12 +1,18 @@
 package com.pgis.bus.net.models.route;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+@XmlRootElement
 public class RouteTypeModel {
 
 	private String id;
 	private String name;
 
+	@JsonIgnore
 	private void _setId(String dbRouteTypeID) {
-		this.id = dbRouteTypeID.substring(8);
+		this.id = getRouteType(dbRouteTypeID);
 	}
 
 	public RouteTypeModel(String routeTypeID) {
@@ -22,10 +28,6 @@ public class RouteTypeModel {
 		return id;
 	}
 
-	public String getDbId() {
-		return "c_route_" + this.id;
-	}
-
 	public void setId(String id) {
 		_setId(id);
 	}
@@ -38,4 +40,16 @@ public class RouteTypeModel {
 		this.name = name;
 	}
 
+	@JsonIgnore
+	public String getDbId() {
+		return getDBRouteType(this.id);
+	}
+
+	public static String getDBRouteType(String routeTypeID) {
+		return "c_route_" + routeTypeID;
+	}
+
+	public static String getRouteType(String dbRouteTypeID) {
+		return dbRouteTypeID.substring(8);
+	}
 }

@@ -1,7 +1,10 @@
 package com.pgis.bus.net.models.route;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 import com.pgis.bus.net.models.TimeIntervalModel;
 
+@XmlRootElement
 public class RouteInfoModel {
 
 	private int id;

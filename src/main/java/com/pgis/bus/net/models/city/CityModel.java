@@ -1,7 +1,10 @@
 package com.pgis.bus.net.models.city;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 import com.pgis.bus.net.models.geom.PointModel;
 
+@XmlRootElement
 public class CityModel {
 	private int id;
 	private String name;

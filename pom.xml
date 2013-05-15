@@ -5,12 +5,28 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>busWeb.net</name>
 
+	<properties>
+		<tomcat.version>7.0.39</tomcat.version>
+		<spring.version>3.2.2.RELEASE</spring.version>
+		<spring.security.version>3.1.4.RELEASE</spring.security.version>
+		<jackson.version>2.2.1</jackson.version>
+	</properties>
 <dependencies>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.7</version>
 			<scope>test</scope>
+		</dependency>
+				<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>${jackson.version}</version>
 		</dependency>
 </dependencies>	
 

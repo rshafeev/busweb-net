@@ -1,9 +1,12 @@
 package com.pgis.bus.net.models.route;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 import com.pgis.bus.net.models.TimeIntervalModel;
 import com.pgis.bus.net.models.geom.PolyLineModel;
 import com.pgis.bus.net.models.station.StationModel;
 
+@XmlRootElement
 public class RouteRelationModel {
 	private int id;
 	private int index;

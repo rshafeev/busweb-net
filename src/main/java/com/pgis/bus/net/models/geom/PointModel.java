@@ -1,6 +1,15 @@
 package com.pgis.bus.net.models.geom;
 
-public class PointModel {
+import java.io.Serializable;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
+public class PointModel implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2536701375361264065L;
 	private double lat;
 	private double lon;
 
@@ -15,7 +24,7 @@ public class PointModel {
 
 	public PointModel(PointModel location) {
 		this.lat = location.lat;
-		this.lon = location.lon;		
+		this.lon = location.lon;
 	}
 
 	public double getLat() {
@@ -33,5 +42,5 @@ public class PointModel {
 	public void setLon(double lon) {
 		this.lon = lon;
 	}
-	
+
 }

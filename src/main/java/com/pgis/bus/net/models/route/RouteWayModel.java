@@ -2,6 +2,9 @@ package com.pgis.bus.net.models.route;
 
 import java.util.Collection;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class RouteWayModel {
 	private int id;
 	private Collection<RouteRelationModel> relations;

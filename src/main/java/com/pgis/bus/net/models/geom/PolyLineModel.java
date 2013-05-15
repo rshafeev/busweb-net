@@ -1,12 +1,22 @@
 package com.pgis.bus.net.models.geom;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.pgis.bus.net.helpers.GeoHelper;
 
-public class PolyLineModel {
+@XmlRootElement
+public class PolyLineModel implements Serializable {
 
-	double[][] points;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 906104327570778966L;
+
+	private double[][] points;
 
 	public PolyLineModel() {
 
@@ -65,12 +75,14 @@ public class PolyLineModel {
 		}
 	}
 
+	@JsonIgnore
 	public int getPointsCount() {
 		if (this.points == null)
 			return 0;
 		return this.points.length;
 	}
 
+	@JsonIgnore
 	public double[] getPoint(int ind) {
 		if (ind < 0 || ind >= getPointsCount())
 			return null;

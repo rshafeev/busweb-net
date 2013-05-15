@@ -3,7 +3,9 @@ package com.pgis.bus.net.models.city;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import javax.xml.bind.annotation.XmlRootElement;
 
+@XmlRootElement
 public class CitiesModel {
 
 	private Collection<CityModel> cities;

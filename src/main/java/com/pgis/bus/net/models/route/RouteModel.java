@@ -1,5 +1,8 @@
 package com.pgis.bus.net.models.route;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class RouteModel {
 	private int id;
 	private int cityID;

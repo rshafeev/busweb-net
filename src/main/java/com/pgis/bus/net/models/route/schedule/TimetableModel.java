@@ -1,5 +1,8 @@
 package com.pgis.bus.net.models.route.schedule;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class TimetableModel {
 
 	/**

@@ -2,8 +2,11 @@ package com.pgis.bus.net.models.route;
 
 import java.util.Collection;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 import com.pgis.bus.net.models.route.schedule.ScheduleGroupModel;
 
+@XmlRootElement
 public class ScheduleModel {
 
 	/**
@@ -20,6 +23,10 @@ public class ScheduleModel {
 	 * Дни недели разбиты по группам. Для каждой группы отдельное расписание
 	 */
 	private Collection<ScheduleGroupModel> groups;
+
+	public ScheduleModel() {
+
+	}
 
 	public int getId() {
 		return id;

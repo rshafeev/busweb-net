@@ -2,8 +2,11 @@ package com.pgis.bus.net.models.route.schedule;
 
 import java.util.Collection;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 import com.pgis.bus.net.models.DayEnumModel;
 
+@XmlRootElement
 public class ScheduleGroupModel {
 
 	/**
