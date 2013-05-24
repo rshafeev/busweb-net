@@ -15,6 +15,9 @@ public class RouteTypeModel {
 		this.id = getRouteType(dbRouteTypeID);
 	}
 
+	public RouteTypeModel() {
+	}
+
 	public RouteTypeModel(String routeTypeID) {
 		_setId(routeTypeID);
 	}
