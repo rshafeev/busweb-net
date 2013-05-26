@@ -53,7 +53,10 @@ public class TimeIntervalModel implements Serializable {
 	public void setTime(double time) {
 		this.time = time;
 	}
-	/*
-	 * public String formatHHMM() { return Integer.toString(getHours()) + ":" + Integer.toString(getMinutes()); }
-	 */
+
+	@JsonIgnore
+	public String formatHHMM() {
+		return Integer.toString(getHours()) + ":" + Integer.toString(getMinutes());
+	}
+
 }
