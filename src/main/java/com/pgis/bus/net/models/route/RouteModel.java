@@ -65,7 +65,7 @@ public class RouteModel {
 	}
 
 	public void setRouteTypeID(String routeTypeID) {
-		if (this.routeTypeID.indexOf("c_route_") == 0) {
+		if (routeTypeID.indexOf("c_route_") == 0) {
 			this.routeTypeID = routeTypeID.substring(8, routeTypeID.length() - 1);
 			return;
 		}

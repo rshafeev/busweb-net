@@ -1,6 +1,10 @@
 package com.pgis.bus.net.request.data;
 
-public class RouteTypeDiscount {
+import javax.xml.bind.annotation.XmlRootElement;
+import java.io.Serializable;
+
+@XmlRootElement
+public class RouteTypeDiscount implements Serializable{
 	private String id;
 	private double discount;
 
@@ -15,12 +19,12 @@ public class RouteTypeDiscount {
 		this.discount = discount;
 	}
 
-	public String getRouteType() {
+	public String getId() {
 		return id;
 	}
 
-	public void setRouteType(String route_type_id) {
-		this.id = route_type_id;
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public double getDiscount() {

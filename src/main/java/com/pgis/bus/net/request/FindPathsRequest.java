@@ -1,5 +1,6 @@
 package com.pgis.bus.net.request;
 
+import java.io.Serializable;
 import java.util.Collection;
 
 import com.pgis.bus.net.models.AlgStrategyEnumModel;
@@ -8,18 +9,21 @@ import com.pgis.bus.net.models.geom.PointModel;
 import com.pgis.bus.net.request.data.OutTimeModel;
 import com.pgis.bus.net.request.data.RouteTypeDiscount;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  * Класс хранит параметры поиска мршрутов м/у точками назначения
  * 
  * @author romario
  */
-public class FindPathsRequest {
+@XmlRootElement
+public class FindPathsRequest implements Serializable{
 
 	private int cityID;
 	private PointModel p1;
 	private PointModel p2;
 	private Collection<RouteTypeDiscount> routeTypes;
-	private boolean isTransitions;
+	private boolean transitions;
 	private AlgStrategyEnumModel algStrategy;
 	private LangEnumModel langID;
 	private double maxDistance;
@@ -99,17 +103,17 @@ public class FindPathsRequest {
 	}
 
 	public boolean isTransitions() {
-		return isTransitions;
+		return transitions;
 	}
 
 	public void setTransitions(boolean isTransitions) {
-		this.isTransitions = isTransitions;
+		this.transitions = isTransitions;
 	}
 
 	@Override
 	public String toString() {
 		return "FindPathsOptions [cityID=" + cityID + ", p1=" + p1 + ", p2=" + p2 + ", routeTypes=" + routeTypes
-				+ ", isTransitions=" + isTransitions + ", algStrategy=" + algStrategy + ", langID=" + langID
+				+ ", transitions=" + transitions + ", algStrategy=" + algStrategy + ", langID=" + langID
 				+ ", maxDistance=" + maxDistance + ", outTime=" + outTime + "]";
 	}
 
